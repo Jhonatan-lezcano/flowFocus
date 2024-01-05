@@ -1,7 +1,15 @@
 module.exports = {
-  arrowParens: 'avoid',
-  bracketSameLine: true,
-  bracketSpacing: false,
-  singleQuote: true,
-  trailingComma: 'all',
-};
+	semi: false,
+	singleQuote: true,
+	jsxSingleQuote: true,
+	printWidth: 120,
+	trailingComma: 'es5',
+	bracketSpacing: true,
+	tabWidth: 2,
+	useTabs: true,
+	arrowParens: 'always',
+	endOfLine: 'auto',
+	semicolon: false,
+	plugins: ['@ianvs/prettier-plugin-sort-imports'],
+	importOrder: ['<TYPES>', '<TYPES>^[.]', '', '^(react/(.*)$)|^(react$)', '', '<THIRD_PARTY_MODULES>', '', '^[./]'],
+}

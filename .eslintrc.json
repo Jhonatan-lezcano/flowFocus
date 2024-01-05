@@ -1,0 +1,38 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "standard-with-typescript",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": ["./tsconfig.json"]
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "react-native"],
+  "rules": {
+    "react/jsx-filename-extension": [1, {"extensions": [".ts", ".tsx"]}],
+    // ajustar para no pasar errores con react-navigation
+    "react/prop-types": [
+      "error",
+      {"ignore": ["navigation", "navigation.navigate"]}
+    ],
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/strict-boolean-expressions": 0,
+    "@typescript-eslint/restrict-template-expressions": 0,
+    "@typescript-eslint/no-confusing-void-expression": 0,
+    "@typescript-eslint/prefer-nullish-coalescing": 0,
+    "@typescript-eslint/no-misused-promises": 0,
+    "@typescript-eslint/consistent-type-definitions": 0
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
